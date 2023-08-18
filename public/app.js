@@ -1,42 +1,32 @@
-var swiper = new Swiper(".mySwiper1", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+var swiper = new Swiper(".mySwiper", {
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    hide: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next-1",
+    prevEl: ".swiper-button-prev-1",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 40,
     },
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 40,
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
     },
-  });
-  
-  
-  var swiper = new Swiper(".mySwiper2", {
-    slidesPerView: 3,
-    spaceBetween: 18,
-    breakpoints: {
-      320:{
-        slidesPerView: 1,
-        spaceBetween: 8,
-      } , 
-      
-      768: {
-        slidesPerView: 1.8,
-        spaceBetween: 18,
-      },
-      1024: {
-        slidesPerView: 2.2,
-        spaceBetween: 20,
-      },
+    1024: {
+      slidesPerView: 2.2,
+      spaceBetween: 40,
     },
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },})
+  },
+});
